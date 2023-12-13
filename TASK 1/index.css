@@ -1,0 +1,151 @@
+:root {
+  --dark: #171717;
+  --subHeading: #2f2f2f;
+  --light: #ffffff;
+  --top_bg: #75879f;
+  --bg_light: #75879f50;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--light);
+}
+
+.top_wrapper {
+  background-color: var(--top_bg);
+}
+
+.top_bar {
+  display: flex;
+  padding: 5em 0em 0em 10em;
+}
+
+.top_bar h2 {
+  font-size: 2em;
+}
+
+.logo_image {
+  width: 70px;
+  height: 70px;
+}
+
+.main_container {
+  display: flex;
+  justify-content: space-around;
+  padding: 2em 10em;
+}
+
+.main_phrases {
+  display: flex;
+  flex-direction: column;
+}
+
+.main_phrases h1 {
+  font-size: 3.5em;
+}
+
+.main_phrases h3 {
+  font-size: 1.5em;
+}
+
+.main_phrases button {
+  width: 150px;
+  padding: 15px;
+}
+.buttons {
+  margin-top: 1em;
+  border: none;
+  border-radius: 15px;
+  background-color: var(--dark);
+  color: var(--light);
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.buttons:hover {
+  box-shadow: 0px 5px 10px 0px var(--dark);
+}
+
+.main_image {
+  width: 45vw;
+  height: 45vh;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5em 0em;
+}
+
+.contents {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+    0deg,
+    var(--bg_light) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  margin-bottom: 2em;
+  padding-bottom: 2.5em;
+}
+
+.contents h2 {
+  margin: 1em 0em;
+  font-size: 2.5em;
+}
+
+.contents div {
+  font-size: 1.5em;
+  color: var(--subHeading);
+}
+
+.individual_images {
+  height: 55em;
+  width: 70em;
+}
+
+.image_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100vw;
+}
+
+.multi_images_guitar {
+  width: 30em;
+  height: 30em;
+  transform: translateX(-3em);
+}
+.multi_images_watch {
+  width: 17em;
+  height: 17em;
+  transform: translateX(-3em);
+}
+
+.contents_end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5em 0em;
+}
+
+.contents_end h2 {
+  margin: 1em 0em;
+  font-size: 3em;
+}
+
+.contents_end button {
+  padding: 17px 20px;
+  margin-top: 1em;
+  border: none;
+  border-radius: 15px;
+  background-color: var(--dark);
+  color: var(--light);
+  font-size: 1.2em;
+}
