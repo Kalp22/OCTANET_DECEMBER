@@ -1,4 +1,4 @@
-const taskInput = document.getElementById("task_input"); //new-task
+const taskInput = document.getElementById("task_input");
 
 const addItem = () => {
   const task = taskInput.value;
