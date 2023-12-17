@@ -12,11 +12,6 @@ const addItem = () => {
     deleteCross.innerHTML = "\u00d7";
     deleteCross.className = "deleteButton";
 
-    deleteCross.onclick = () => {
-      taskList.removeChild(newTask);
-      saveList();
-    };
-
     taskLeft.appendChild(deleteCross);
 
     const taskText = document.createElement("span");
@@ -30,8 +25,7 @@ const addItem = () => {
 
     const taskImage = document.createElement("img");
     taskImage.src = "checkbox-unchecked.svg";
-
-    taskImage.onclick = () => selectItem(newTask);
+    taskImage.className = "checkbox";
 
     newTask.appendChild(taskImage);
   }
@@ -39,8 +33,26 @@ const addItem = () => {
   saveList();
 };
 
+addEventListener("click", (e) => {
+  if (e.target.className === "deleteButton") {
+    const newTask = e.target.parentElement.parentElement;
+    deleteItem(newTask);
+  }
+  if (e.target.className === "checkbox") {
+    const newTask = e.target.parentElement;
+    selectItem(newTask);
+  }
+});
+
 const selectItem = (newTask) => {
   newTask.classList.toggle("checked");
+
+  saveList();
+};
+
+const deleteItem = (newTask) => {
+  newTask.remove();
+
   saveList();
 };
 
